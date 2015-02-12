@@ -1,0 +1,24 @@
+-- Table structure for table `activity`
+--
+
+DROP TABLE IF EXISTS `activity`;
+CREATE TABLE `activity` (
+  `UNIQUEFIELD` bigint(20) NOT NULL,
+  `MODIFIER` char(3) default NULL,
+  `OLDUF` bigint(20) default NULL,
+  `REPORTINGYEAR` bigint(20) default NULL,
+  `LAB` bigint(20) default NULL,
+  `PROTOCOL` bigint(20) default NULL,
+  `MODIFIED` datetime default NULL,
+  `USR_MODIFIER` bigint(20) default NULL,
+  PRIMARY KEY  (`UNIQUEFIELD`),
+  KEY `IDX_152` (`LAB`),
+  KEY `IDX_153` (`PROTOCOL`),
+  CONSTRAINT `FK_152` FOREIGN KEY (`LAB`) REFERENCES `lab` (`UNIQUEFIELD`),
+  CONSTRAINT `FK_153` FOREIGN KEY (`PROTOCOL`) REFERENCES `protocol` (`UNIQUEFIELD`)
+) TYPE=InnoDB;
+
+--
+-- Dumping data for table `activity`
+--
+

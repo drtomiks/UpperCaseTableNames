@@ -10,4 +10,6 @@ I couldn’t find anything else around at the time to solve the problem, so I wr
 names and references were all in back ticks, so the script simply uppercases anything it finds in back
 ticks using regex.
 
-I’ve inclueded a sample input file. Feel free to use this script any way you like.
+I’ve included a sample input file inputfile_sql.txt. Rename it to inputfile.sql.
+
+Feel free to use this script any way you like.
